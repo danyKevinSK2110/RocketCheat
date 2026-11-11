@@ -14,7 +14,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Unzip app folder
-      run: unzip app.zip
+      run: |
+        ls -la
+        unzip -o *.zip
 
     - name: Set up JDK 17
       uses: actions/setup-java@v4
